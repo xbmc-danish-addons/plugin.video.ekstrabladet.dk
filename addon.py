@@ -71,7 +71,7 @@ class EBTVAddon(object):
     def addClip(self, url, image, title, date):
         infoLabels = dict()
         infoLabels['studio'] = ADDON.getAddonInfo('name')
-        infoLabels['title'] = title
+        infoLabels['title'] = title.decode('iso-8859-1')
         if date:
             infoLabels['date'] = date.strftime('%d.%m.%Y')
             infoLabels['aired'] = date.strftime('%Y-%m-%d')
